@@ -12,38 +12,40 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<!-- internal table style -->
 	<style type="text/css">
-		body{margin: 0 auto; padding: 4px;}
+		body{margin: 0 auto; padding: 4px; background-image: url(darkness.png);}
 		/* style header */
-		span.header h2{margin-left: 5px; color: navy; margin-top: 5px; font-family: cursive; margin-top: 15px;}
-		span.header h2 a{font-size: 16px;}
-		span.header h2 a:hover{text-decoration: none;}
-		span.header h2 a:active{color: #009adb;}
-		span.header h2 span.panah{font-size: 16px;}
+		div.header h1{margin-left: 5px; color: gold; margin-top: 10px; font-family: cursive; margin-top: 15px; text-align: center; margin-bottom: 30px;}
+		div.header a{font-size: 16px;}
+		div.header a:hover{text-decoration: none; color: lightgreen}
+		div.header a:active{color: #009adb;}
+		div.header span.source{font-size: 16px; color: #1E90FF;}
 		/* style field filter data */
-		span.header input#myInput{
-		  background-image: url('icon_search.png');
-		  background-position: auto; 
+		div.header input#myInput{
+		  background-position: auto;
+		  background: transparent; 
 		  background-repeat: no-repeat; 
 		  width: 30%;
 		  float: right; 
 		  font-size: 14px; 
 		  padding: 10px 20px 10px 40px; 
 		  border: 1px solid #ddd; 
-		  margin-bottom: 10px;
+		  margin-bottom: 15px;
+		  color: white;
 		}
 		/* style table */
 		table{table-layout: fixed; width: 100%; text-align: center; margin: 0;}
 		table,tr,th,td{border: 1px solid gold; border-collapse: collapse; word-wrap: break-word;}
 		table th{color: white; background-color: navy; margin: 0;}
-		table tr:nth-child(even){background-color: #eee;}
-		table tr:nth-child(odd){background-color: #fff;}
+		table tr:nth-child(even){background: transparent; color: lightgreen;}
+		table tr:nth-child(odd){background: transparent; color: lightgreen;}
 	</style>
 </head>
 <body onLoad="buatTabelHtml('#tabelDataObjekJs')">
-	<span class="header">
-	<h2>Table Data From <span class="panah">&rarr;</span> <a href="https://swapi.co/api/planets/" target="_BLANK"> https://swapi.co/api/planets/</a></h2>
+	<div class="header">
+	<h1><img src="planet_icon.png" width="50" height="50"> Planet List</h1>
+	<span class="source">Data source &rarr;</span><a href="https://swapi.co/api/planets/" target="_BLANK"> https://swapi.co/api/planets/</a>
 	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-	</span>
+	</div>
 	<div class="table-responsive-sm">
 	  <table id="tabelDataObjekJs" class="table">
 	  </table>
