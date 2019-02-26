@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- local script js -->
+	<script src="script_table_data_js_object.js"></script>
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- internal table style -->
+	<style type="text/css">
+		body{margin: 0 auto; padding: 4px;}
+		/* style header */
+		span.header h2{margin-left: 5px; color: navy; margin-top: 5px; font-family: cursive; margin-top: 15px;}
+		span.header h2 a{font-size: 16px;}
+		span.header h2 a:hover{text-decoration: none;}
+		span.header h2 a:active{color: #009adb;}
+		span.header h2 span.panah{font-size: 16px;}
+		/* style field filter data */
+		span.header input#myInput{
+		  background-image: url('icon_search.png');
+		  background-position: auto; 
+		  background-repeat: no-repeat; 
+		  width: 30%;
+		  float: right; 
+		  font-size: 14px; 
+		  padding: 10px 20px 10px 40px; 
+		  border: 1px solid #ddd; 
+		  margin-bottom: 10px;
+		}
+		/* style table */
+		table{table-layout: fixed; width: 100%; text-align: center; margin: 0;}
+		table,tr,th,td{border: 1px solid gold; border-collapse: collapse; word-wrap: break-word;}
+		table th{color: white; background-color: navy; margin: 0;}
+		table tr:nth-child(even){background-color: #eee;}
+		table tr:nth-child(odd){background-color: #fff;}
+	</style>
+</head>
+<body onLoad="buatTabelHtml('#tabelDataObjekJs')">
+	<span class="header">
+	<h2>Table Data From <span class="panah">&rarr;</span> <a href="https://swapi.co/api/planets/" target="_BLANK"> https://swapi.co/api/planets/</a></h2>
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+	</span>
+	<div class="table-responsive-sm">
+	  <table id="tabelDataObjekJs" class="table">
+	  </table>
+  </div>
+	<!-- bootstrap template -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
